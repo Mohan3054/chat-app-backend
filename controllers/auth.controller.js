@@ -97,7 +97,7 @@ const forgotPassword = async (req, res) => {
 
         await tokenPayload.save();
 
-        const link = `https://classy-treacle-332e43.netlify.app/passwordReset?token=${newToken}&id=${user._id}`;
+        const link = `https://elegant-rolypoly-a385e4.netlify.app/passwordReset?token=${newToken}&id=${user._id}`;
 
         await sendEmail(user.email, 'Password Reset Link', {name: user.name, link: link});
         
